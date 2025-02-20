@@ -1,8 +1,5 @@
 -- README file generetad by Claude-3.5-Sonnet --
 
-I'll create a README.md file that explains how to use these three Python files. I notice that `create_json.py` and `json_generate.py` appear to be identical files, so I'll document them as alternatives.
-
-````markdown:/Users/ribeirovictor/Documents/work/2em1/landings/certificados/README.md
 # Certificate Files Management
 
 This repository contains Python scripts to manage and organize PDF certificate files.
@@ -13,7 +10,7 @@ Before using these scripts, make sure you have the following dependencies instal
 
 ```bash
 pip install PyMuPDF unidecode
-````
+```
 
 ## Scripts Description
 
