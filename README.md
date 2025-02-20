@@ -1,3 +1,5 @@
+-- README file generetad by Claude-3.5-Sonnet --
+
 I'll create a README.md file that explains how to use these three Python files. I notice that `create_json.py` and `json_generate.py` appear to be identical files, so I'll document them as alternatives.
 
 ````markdown:/Users/ribeirovictor/Documents/work/2em1/landings/certificados/README.md
