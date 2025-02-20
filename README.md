@@ -1,38 +1,77 @@
-# PDF-rename-V2
-A small script that renames PDF files using a string of text from inside the PDF.
+I'll create a README.md file that explains how to use these three Python files. I notice that `create_json.py` and `json_generate.py` appear to be identical files, so I'll document them as alternatives.
 
-**VIDEO TUTORIAL/EXPLANIATION:**
+````markdown:/Users/ribeirovictor/Documents/work/2em1/landings/certificados/README.md
+# Certificate Files Management
 
-https://www.youtube.com/watch?v=9kyBEaGw_Ic
+This repository contains Python scripts to manage and organize PDF certificate files.
 
+## Requirements
 
-**Note:** This tutorial assumes you have:
-  1. Python 3.9.5 
-  2. pip3
-  3. Visual Studio Code (VSC)
+Before using these scripts, make sure you have the following dependencies installed:
 
+```bash
+pip install PyMuPDF unidecode
+````
 
-#### STEPS
-1. Change default profile within VSC:
-    * CTRL + SHIFT + P
-    * Search "Terminal: Select Default Profile"
-    * Click "Command Prompt" 
-   
-2. Create and activate the virtual environment + install library (run commands in a new CMD terminal)
-   1. py -m venv venv 
-      * (Creates virtual environment)
-   2. venv\Scripts\activate                   
-      * (activates virtual environment)
-   3. python -m pip install --upgrade pip     
-      * (Upgrade pip in virtual environment)
-   4. python -m pip install --upgrade pymupdf
-      * (Install the PyMuPDF library)
-   
-3. Create the python file (you can use any name or follow the tutorial)
+## Scripts Description
 
-#### IMPORTANT
-This is a basic template on how to rename files using text from inside the PDF.
+### 1. PDF File Renaming (`rename_pdf.py`)
 
-Leave a comment on the YouTube video or here if you have a question for another specific case.
+This script automatically renames PDF files based on their content. It:
 
-If you want to try and modify the project for your specfic case, I suggest looking into **regular expresions** (python has a library called re).
+- Reads PDF files from the `arquivos` directory
+- Extracts text from the first page
+- Creates a clean, formatted filename from the content
+- Removes accents and special characters
+- Renames the file with the new name
+
+Usage:
+
+```bash
+python rename_pdf.py
+```
+
+### 2. File List Generation (`create_json.py` or `json_generate.py`)
+
+These scripts (both do the same thing) create a JSON file containing a list of all files in a specified directory.
+
+Usage:
+
+```bash
+python create_json.py
+```
+
+or
+
+```bash
+python json_generate.py
+```
+
+When prompted, enter the directory path you want to scan.
+
+## Directory Structure
+
+```
+.
+├── arquivos/         # Directory containing PDF files
+├── create_json.py    # Script to generate JSON file list
+├── json_generate.py  # Alternative script to generate JSON file list
+├── rename_pdf.py     # Script to rename PDF files
+└── files.json       # Generated JSON file containing the file list
+```
+
+## Workflow
+
+1. Place your PDF certificates in the `arquivos` directory
+2. Run `rename_pdf.py` to automatically rename the files based on their content
+3. Run either `create_json.py` or `json_generate.py` to generate a JSON list of the files
+
+## Notes
+
+- The PDF renaming script expects files to be in the `arquivos` directory
+- The JSON generation scripts will create a `files.json` file in the current directory
+- Make sure you have write permissions in the directories you're working with
+
+```
+
+```
